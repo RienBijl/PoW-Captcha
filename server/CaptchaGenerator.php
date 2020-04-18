@@ -29,7 +29,7 @@ class CapthaGenerator {
      * @throws Exception
      */
     public function __construct(int $cost) {
-        $this->cost = $cost * 100;
+        $this->cost = $cost * 3000;
         $this->secret = $this->generateSecret(64);
         $this->initialization = $this->generateSecret(16);
         $this->solvant = random_int(1, $this->cost);
